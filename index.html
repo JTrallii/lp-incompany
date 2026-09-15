@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -47,7 +47,7 @@
       body {
         margin: 0;
         font-family:
-          "Manrope",
+          "Source Sans 3",
           ui-sans-serif,
           system-ui,
           -apple-system,
@@ -164,11 +164,13 @@
         color: var(--success);
       }
       h1 {
+        font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
         font-size: clamp(44px, 5.1vw, 72px);
         line-height: 0.98;
-        letter-spacing: -0.055em;
+        letter-spacing: -0.038em;
         margin: 24px 0 24px;
         max-width: 760px;
+        font-weight: 800;
       }
       h1 .gradient {
         background: linear-gradient(95deg, #fff 15%, #b9b0ff 58%, #74dae1 100%);
@@ -533,10 +535,25 @@
         text-transform: uppercase;
       }
       h2 {
+        font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
         font-size: clamp(34px, 4vw, 54px);
         line-height: 1.04;
-        letter-spacing: -0.045em;
+        letter-spacing: -0.034em;
         margin: 13px 0 17px;
+        font-weight: 700;
+      }
+      h3,
+      .big-statement {
+        font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
+      }
+      .tag,
+      .btn,
+      .eyebrow,
+      .step-label,
+      .why-kicker,
+      .value-state,
+      .sim-chip {
+        font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
       }
       .lead {
         font-size: 17px;
@@ -557,8 +574,8 @@
       }
       .big-statement {
         font-size: clamp(38px, 4.5vw, 62px);
-        font-weight: 850;
-        letter-spacing: -0.055em;
+        font-weight: 800;
+        letter-spacing: -0.04em;
         line-height: 1.02;
       }
       .big-statement em {
@@ -1438,7 +1455,7 @@
         bottom: 27px;
         color: #858da1;
         font-size: 11px;
-        font-weight: 750;
+        font-weight: 700;
         padding-top: 14px;
         border-top: 1px solid var(--line);
       }
@@ -1689,7 +1706,7 @@
         border-radius: 10px;
         color: rgba(255, 255, 255, 0.58);
         font-size: 11px;
-        font-weight: 750;
+        font-weight: 700;
         background: rgba(255, 255, 255, 0.035);
       }
 
@@ -1951,6 +1968,217 @@
       .faq .faq-a p strong {
         color: var(--ink);
       }
+
+      /* Financial emphasis */
+      .money-inline {
+        display: inline-block;
+        white-space: nowrap;
+        font-family: var(--font-display);
+        font-weight: 800;
+        letter-spacing: -0.055em;
+        color: var(--brand);
+      }
+      .money-block {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 4px 0 10px;
+      }
+      .money-block strong {
+        font-family: var(--font-display);
+        font-size: clamp(42px, 5.3vw, 74px);
+        line-height: 0.92;
+        letter-spacing: -0.065em;
+        color: var(--ink);
+      }
+      .money-block span {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--brand);
+      }
+      .commission-band {
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: 0.72fr 1.28fr;
+        overflow: hidden;
+        border: 1px solid #dedafb;
+        border-radius: 22px;
+        background: linear-gradient(135deg, #f8f7ff 0%, #fff 62%);
+        box-shadow: 0 22px 60px rgba(53, 43, 126, 0.07);
+      }
+      .commission-number {
+        min-height: 170px;
+        padding: 30px 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(135deg, #6355dc, #7365ee);
+        color: #fff;
+      }
+      .commission-number strong {
+        font-family: var(--font-display);
+        font-size: clamp(48px, 6vw, 78px);
+        line-height: 0.9;
+        letter-spacing: -0.07em;
+      }
+      .commission-number span {
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: 0.78;
+      }
+      .commission-copy {
+        padding: 30px 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .commission-copy strong {
+        font-size: 20px;
+        line-height: 1.25;
+        color: var(--ink);
+      }
+      .commission-copy p {
+        margin: 8px 0 0;
+        color: var(--ink-soft);
+        line-height: 1.65;
+        font-size: 14px;
+      }
+
+      /* Delivery / reputation section */
+      .delivery-section {
+        background: linear-gradient(180deg, #fbfbfe 0%, #f5f4ff 100%);
+        overflow: hidden;
+      }
+      .delivery-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 70px;
+        align-items: center;
+      }
+      .delivery-copy h2 {
+        max-width: 720px;
+      }
+      .delivery-copy .lead {
+        max-width: 660px;
+      }
+      .delivery-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 16px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--brand);
+      }
+      .delivery-kicker:before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--brand);
+        opacity: 0.55;
+      }
+      .delivery-panel {
+        position: relative;
+        padding: 28px;
+        border: 1px solid #dedcf0;
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0 28px 70px rgba(26, 29, 62, 0.07);
+      }
+      .delivery-panel:before {
+        content: "CONFIANÇA";
+        position: absolute;
+        right: 24px;
+        top: 20px;
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        color: #a2a5b1;
+      }
+      .delivery-point {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        gap: 15px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .delivery-point:last-child {
+        border-bottom: 0;
+        padding-bottom: 4px;
+      }
+      .delivery-point:first-child {
+        padding-top: 8px;
+      }
+      .delivery-no {
+        width: 44px;
+        height: 44px;
+        border-radius: 13px;
+        display: grid;
+        place-items: center;
+        background: #f0eeff;
+        color: var(--brand);
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: 13px;
+      }
+      .delivery-point strong {
+        display: block;
+        color: var(--ink);
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .delivery-point p {
+        margin: 0;
+        color: var(--ink-soft);
+        line-height: 1.6;
+        font-size: 13px;
+      }
+      .delivery-note {
+        margin-top: 26px;
+        padding: 18px 20px;
+        border-left: 3px solid var(--brand);
+        background: rgba(101, 87, 232, 0.055);
+        border-radius: 0 14px 14px 0;
+        color: var(--ink-soft);
+        line-height: 1.62;
+        font-size: 14px;
+      }
+      .delivery-note strong {
+        color: var(--ink);
+      }
+
+      @media (max-width: 900px) {
+        .commission-band,
+        .delivery-grid {
+          grid-template-columns: 1fr;
+        }
+        .commission-number {
+          min-height: auto;
+        }
+        .delivery-grid {
+          gap: 34px;
+        }
+      }
+      @media (max-width: 640px) {
+        .commission-number,
+        .commission-copy {
+          padding: 24px;
+        }
+        .delivery-panel {
+          padding: 20px;
+        }
+        .delivery-panel:before {
+          display: none;
+        }
+      }
       .final-cta {
         padding-top: 90px;
       }
@@ -2009,6 +2237,7 @@
     </style>
   </head>
   <body>
+    <!-- LP InCompany v8 -->
     <main>
       <section class="hero" id="inicio">
         <div class="hero-orb orb-1"></div>
@@ -2085,7 +2314,8 @@
                   stroke-width="2"
                 >
                   <path d="M20 6 9 17l-5-5" /></svg
-                >Você não precisa conhecer o serviço</span
+                ><strong style="color: var(--brand)">12% a 20%</strong> de
+                comissão</span
               >
             </div>
           </div>
@@ -2250,61 +2480,75 @@
       <section class="section pain-section" id="oportunidade">
         <div class="container">
           <div class="pain-head reveal">
-            <div class="tag">Sua rede já tem valor</div>
+            <div class="tag">O valor financeiro da sua rede</div>
             <h2>
-              Você já conhece empresas. A diferença é que agora essas conexões
-              podem gerar comissão.
+              Já pensou em gerar <span class="money-inline">R$ 5.000</span> em
+              comissões em um único mês só fazendo boas conexões?
             </h2>
             <p class="lead">
-              Clientes, fornecedores, parceiros, antigos contatos profissionais,
-              amigos empresários. Você já conhece pessoas que abrem portas
-              dentro de empresas.
+              Na InCompany, as comissões ficam entre
               <strong
-                >Com a InCompany, essa conexão pode deixar de ser apenas
-                relacionamento e passar a ter valor financeiro quando gera um
-                contrato.</strong
+                >12% e 20% sobre os contratos originados pelas empresas que você
+                indica.</strong
               >
+              Você não precisa vender, negociar ou executar. Sua parte é abrir a
+              porta; a nossa é transformar essa conexão em negócio.
             </p>
           </div>
           <div class="pain-grid">
             <article class="pain-card reveal">
               <span class="pain-number">01</span>
-              <h3>Você já conhece as empresas.</h3>
+              <h3>12% a 20% por negócio gerado.</h3>
               <p>
-                Não precisa prospectar do zero. Basta olhar para a sua própria
-                rede e pensar em empresas com as quais você já tenha algum tipo
-                de conexão.
+                Quando uma empresa indicada por você fecha contrato com a
+                InCompany, a sua conexão gera uma comissão dentro dessa faixa.
               </p>
             </article>
             <article class="pain-card reveal">
               <span class="pain-number">02</span>
-              <h3>Você não precisa saber do que elas precisam.</h3>
+              <h3>Poucas conexões já podem somar milhares.</h3>
               <p>
-                Seu papel não é diagnosticar, apresentar serviço ou convencer
-                ninguém. A InCompany assume essa etapa depois que recebe a
-                indicação.
+                Você não precisa de dezenas de indicações. Alguns contratos
+                convertidos já podem representar uma receita adicional
+                relevante.
               </p>
             </article>
             <article class="pain-card reveal">
               <span class="pain-number">03</span>
-              <h3>Uma simples apresentação pode virar negócio.</h3>
+              <h3>Sem aumentar sua estrutura para ganhar.</h3>
               <p>
-                Se a conexão evoluir para um contrato com a InCompany, a
-                indicação que abriu essa porta permanece vinculada a você.
+                Você não monta equipe, não assume negociação e não executa o
+                serviço. A InCompany cuida do processo comercial.
               </p>
             </article>
           </div>
           <div class="pain-answer reveal">
-            <span class="pain-answer-icon">↗</span>
+            <span class="pain-answer-icon">R$</span>
             <div>
+              <div class="money-block">
+                <strong>R$ 5.400</strong><span>em comissão</span>
+              </div>
+              <p>
+                <strong>3 contratos de R$ 12.000 com comissão de 15%.</strong>
+                Você fez as conexões. A InCompany fez o trabalho comercial. O
+                valor vem dos negócios que nasceram das empresas indicadas por
+                você.
+              </p>
+            </div>
+          </div>
+          <div class="commission-band reveal">
+            <div class="commission-number">
+              <strong>12%–20%</strong><span>faixa de comissão</span>
+            </div>
+            <div class="commission-copy">
               <strong
-                >Você não precisa ter empresa, vender ou dominar qualquer
-                serviço. Precisa apenas fazer a ponte.</strong
+                >Quanto maior o contrato originado pela sua indicação, maior
+                pode ser a sua comissão.</strong
               >
               <p>
-                Seu contato abre a porta. A InCompany faz o trabalho comercial.
-                Quando essa conexão se transforma em contrato, você pode
-                participar do resultado.
+                A lógica é direta: sua conexão abre a oportunidade; quando ela
+                se transforma em contrato com a InCompany, aplica-se a comissão
+                correspondente à parceria.
               </p>
             </div>
           </div>
@@ -2368,11 +2612,11 @@
                 <div>
                   <strong>O contrato gerado</strong
                   ><span
-                    >Quando a sua conexão vira negócio, ela pode gerar comissão
-                    para você.</span
+                    >Quando a sua conexão vira negócio, você recebe entre 12% e
+                    20% de comissão.</span
                   >
                 </div>
-                <div class="value-state">REMUNERADO</div>
+                <div class="value-state">12%–20%</div>
               </div>
             </div>
           </div>
@@ -2439,13 +2683,14 @@
               <article class="step">
                 <span class="step-n">04</span>
                 <div class="step-label">RESULTADO</div>
-                <h3>Sua conexão gera comissão</h3>
+                <h3>Sua conexão gera de 12% a 20%</h3>
                 <p>
                   Se a empresa indicada fechar contrato com a InCompany, a
                   origem daquele negócio continua vinculada à sua indicação.
                 </p>
                 <span class="step-foot"
-                  >Você participa do resultado gerado pela conexão.</span
+                  >Você recebe a comissão correspondente ao contrato
+                  gerado.</span
                 >
               </article>
             </div>
@@ -2456,9 +2701,75 @@
               InCompany. Seu papel termina na indicação; o processo comercial
               passa a ser nosso.
             </p>
-            <a class="btn btn-primary" href="#seguranca"
-              >Como minha indicação fica protegida?</a
+            <a class="btn btn-primary" href="#entrega"
+              >O que acontece depois da indicação?</a
             >
+          </div>
+        </div>
+      </section>
+
+      <section class="section delivery-section" id="entrega">
+        <div class="container delivery-grid">
+          <div class="delivery-copy reveal">
+            <div class="delivery-kicker">
+              O que acontece com a relação que você abriu
+            </div>
+            <h2>
+              A indicação abre a porta.
+              <em>A entrega faz a parceria continuar.</em>
+            </h2>
+            <p class="lead">
+              Você está apresentando alguém da sua rede. Por isso, o que
+              acontece depois da indicação importa tanto quanto o fechamento.
+              <strong
+                >A partir da conexão, a responsabilidade de conduzir a relação,
+                construir valor e entregar bem é da InCompany.</strong
+              >
+            </p>
+            <div class="delivery-note">
+              <strong>Seu papel é abrir uma porta de confiança.</strong> O nosso
+              é fazer essa confiança valer a pena para a empresa indicada — no
+              atendimento, na negociação e na entrega.
+            </div>
+          </div>
+          <div class="delivery-panel reveal">
+            <div class="delivery-point">
+              <div class="delivery-no">01</div>
+              <div>
+                <strong>Você faz uma apresentação, não uma venda.</strong>
+                <p>
+                  A sua reputação entra na conexão, mas você não precisa assumir
+                  proposta, promessa comercial ou execução.
+                </p>
+              </div>
+            </div>
+            <div class="delivery-point">
+              <div class="delivery-no">02</div>
+              <div>
+                <strong
+                  >A InCompany assume a responsabilidade dali em diante.</strong
+                >
+                <p>
+                  Nossa equipe conduz a conversa, entende o cenário, negocia e
+                  responde pela relação comercial construída com a empresa
+                  indicada.
+                </p>
+              </div>
+            </div>
+            <div class="delivery-point">
+              <div class="delivery-no">03</div>
+              <div>
+                <strong
+                  >Fechar é importante. Entregar bem é o que sustenta a
+                  parceria.</strong
+                >
+                <p>
+                  Uma boa relação não termina no contrato. A continuidade
+                  depende do valor percebido pela empresa que confiou na
+                  conexão.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -2514,11 +2825,11 @@
             <article class="why-card reveal">
               <div class="why-icon">04</div>
               <span class="why-kicker">COMISSÃO</span>
-              <h3>O contrato mantém a origem da conexão.</h3>
+              <h3>De 12% a 20% sobre o negócio gerado.</h3>
               <p>
-                Quando a empresa indicada se transforma em cliente, a
-                participação do indicador segue a regra comercial definida para
-                o programa.
+                Quando a empresa indicada se transforma em cliente, a comissão
+                vinculada à sua conexão fica entre 12% e 20% do contrato
+                originado.
               </p>
             </article>
           </div>
@@ -2587,19 +2898,19 @@
       <section class="section" id="simulador">
         <div class="container sim-grid">
           <div class="sim-copy reveal">
-            <div class="tag">Quando uma conexão vira contrato</div>
+            <div class="tag">Coloque números na oportunidade</div>
             <h2>
-              Veja o que algumas indicações convertidas podem representar em
-              comissão.
+              Quanto as empresas que você conhece podem representar em dinheiro?
             </h2>
             <p class="lead">
-              Ajuste quantas empresas indicadas fecharam contrato, o ticket
-              médio e o percentual para visualizar diferentes cenários.
+              A comissão varia entre <strong>12% e 20%</strong>. Ajuste o número
+              de contratos e o ticket médio para enxergar quanto algumas boas
+              indicações podem gerar.
             </p>
             <p class="sim-guidance">
-              A lógica é simples: você indica empresas; a InCompany conduz os
-              negócios; os contratos originados pela sua conexão compõem o
-              resultado.
+              Exemplo: 3 contratos de R$ 12.000 a 15% somam R$ 5.400 em
+              comissão. Você abre as portas; a InCompany conduz todo o processo
+              até o fechamento.
             </p>
             <div class="sim-actions">
               <a class="btn btn-primary" href="#criterios"
@@ -2645,22 +2956,22 @@
             </div>
             <div class="field">
               <div class="field-head">
-                <span>Percentual de comissão</span
-                ><span class="field-value" id="commissionValue">5%</span>
+                <span>Comissão aplicada ao contrato</span
+                ><span class="field-value" id="commissionValue">15%</span>
               </div>
               <input
                 type="range"
                 id="commission"
-                min="1"
-                max="30"
-                value="5"
-                aria-label="Percentual de comissão"
+                min="12"
+                max="20"
+                value="15"
+                aria-label="Percentual de comissão entre 12 e 20 por cento"
               />
             </div>
             <div class="sim-result">
               <div>
                 <span>Comissão sobre os contratos indicados</span
-                ><strong id="resultValue">R$ 2.000</strong>
+                ><strong id="resultValue">R$ 6.000</strong>
               </div>
               <div class="sim-chip">SEM VENDER OU EXECUTAR</div>
             </div>
@@ -2745,8 +3056,8 @@
               <strong>O princípio é simples:</strong
               ><span
                 >você indica uma empresa; a InCompany conduz a relação
-                comercial; se essa conexão virar contrato, a indicação pode
-                gerar comissão.</span
+                comercial; se essa conexão virar contrato, você recebe uma
+                comissão entre 12% e 20%.</span
               >
             </div>
           </div>
@@ -2809,14 +3120,15 @@
             </div>
             <div class="faq-item">
               <button class="faq-q" type="button">
-                <span><b>05</b> Quando a indicação gera comissão?</span
+                <span><b>05</b> Quanto eu posso ganhar por uma indicação?</span
                 ><span>+</span>
               </button>
               <div class="faq-a">
                 <p>
-                  Quando a empresa que você indicou fecha um contrato originado
-                  daquela conexão, a indicação pode gerar comissão conforme a
-                  regra comercial do programa.
+                  Quando a empresa indicada fecha um contrato originado pela sua
+                  conexão, a comissão fica entre 12% e 20% do valor daquele
+                  contrato. Quanto maior o negócio gerado, maior tende a ser o
+                  valor da sua comissão.
                 </p>
               </div>
             </div>
@@ -2865,14 +3177,14 @@
                 Você não precisa descobrir o que elas precisam, saber vender ou
                 entender os serviços da InCompany. Faça a conexão. Nós assumimos
                 a conversa, conduzimos o negócio e, se a sua indicação gerar
-                contrato, você participa do resultado.
+                contrato, você recebe entre 12% e 20% de comissão.
               </p>
               <div class="cta-actions">
                 <a class="btn btn-primary" href="#como-funciona"
                   >Ver o passo a passo novamente</a
                 >
-                <a class="btn btn-secondary-dark" href="#seguranca"
-                  >Entender como a indicação fica registrada</a
+                <a class="btn btn-secondary-dark" href="#entrega"
+                  >Entender o que acontece depois da indicação</a
                 >
               </div>
             </div>
